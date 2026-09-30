@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nestwell — Everyday Comfort, Curated</title>
+<meta name="description" content="Nestwell is a curated online shop for pet comfort, home wellness, self-care, kitchen organization, and fitness essentials. Order directly on WhatsApp — cash on delivery or bank transfer.">
+<meta name="keywords" content="Nestwell, online shop Pakistan, pet comfort products, home wellness, self care gifts, kitchen organization, fitness accessories, WhatsApp order">
+<meta name="author" content="Nestwell">
+<meta name="robots" content="index, follow">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Nestwell — Everyday Comfort, Curated">
+<meta property="og:description" content="Small things that make the day easier. Pet comfort, home wellness, self-care, kitchen and fitness essentials — order directly on WhatsApp.">
+<meta property="og:site_name" content="Nestwell">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Nestwell — Everyday Comfort, Curated">
+<meta name="twitter:description" content="Small things that make the day easier. Pet comfort, home wellness, self-care, kitchen and fitness essentials — order directly on WhatsApp.">
+
+<meta name="theme-color" content="#2e6f6b">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%232e6f6b%22/><text x=%2250%22 y=%2266%22 font-size=%2255%22 fill=%22white%22 text-anchor=%22middle%22 font-family=%22Georgia,serif%22>N</text></svg>">
+</head>
+<body>
+<style>
+  /* layout: single-scroll storefront — sticky compact header, hero, five category
+     bands each with a horizontally-scannable product grid, trust strip, footer.
+     WhatsApp is the checkout: every product card ends in an order button. */
+  :root{
+    --bg:#f3f2ea; --surface:#ffffff; --surface-2:#eceae0; --line:#dcd9cc;
+    --ink:#1c2624; --ink-muted:#57645f; --ink-faint:#8a958f;
+    --accent:#2e6f6b; --accent-ink:#0f3c39; --accent-soft:#dbe9e6;
+    --whatsapp:#3f8f5f; --whatsapp-soft:#e0efe4;
+    --shadow: 0 1px 2px rgba(28,38,36,0.06), 0 6px 20px rgba(28,38,36,0.05);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#141a19; --surface:#1c2422; --surface-2:#212a28; --line:#2e3937;
+      --ink:#eef1ef; --ink-muted:#a9b5b0; --ink-faint:#748782;
+      --accent:#6fc0b8; --accent-ink:#d6f0ec; --accent-soft:#233735;
+      --whatsapp:#71c78f; --whatsapp-soft:#1f3327;
+      --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 6px 20px rgba(0,0,0,0.25);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#141a19; --surface:#1c2422; --surface-2:#212a28; --line:#2e3937;
+    --ink:#eef1ef; --ink-muted:#a9b5b0; --ink-faint:#748782;
+    --accent:#6fc0b8; --accent-ink:#d6f0ec; --accent-soft:#233735;
+    --whatsapp:#71c78f; --whatsapp-soft:#1f3327;
+    --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 6px 20px rgba(0,0,0,0.25);
+  }
+
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:'Manrope',system-ui,sans-serif;}
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+  a{color:inherit;}
+  .wrap{max-width:1080px;margin:0 auto;padding-inline:20px;}
+
+  header.top{
+    position:sticky; top:env(safe-area-inset-top,0px); z-index:10;
+    background:color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter:blur(8px); border-bottom:1px solid var(--line);
+  }
+  .top-inner{display:flex;align-items:center;justify-content:space-between;padding-block:12px;gap:12px;}
+  .wordmark{font-family:'Fraunces',serif;font-weight:600;font-size:20px;letter-spacing:-.01em;}
+  .top-cta{
+    font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:500;
+    background:var(--whatsapp-soft);color:var(--whatsapp);padding:7px 12px;border-radius:999px;
+    display:flex;align-items:center;gap:6px;white-space:nowrap;text-decoration:none;
+  }
+
+  .hero{padding-block:56px 40px;display:flex;flex-direction:column;gap:14px;max-width:640px;}
+  .eyebrow{
+    font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--accent-ink);background:var(--accent-soft);display:inline-flex;padding:4px 10px;
+    border-radius:5px;width:fit-content;
+  }
+  h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(32px,5vw,46px);line-height:1.08;margin:6px 0 0;text-wrap:balance;}
+  .hero p{color:var(--ink-muted);font-size:16px;line-height:1.6;margin:0;max-width:54ch;}
+  .hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px;}
+  .btn{
+    font-family:'Manrope',sans-serif;font-weight:700;font-size:14px;
+    padding:11px 18px;border-radius:9px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;
+    border:1px solid transparent;
+  }
+  .btn.primary{background:var(--whatsapp);color:#fff;}
+  .btn.ghost{border-color:var(--line);color:var(--ink);}
+
+  nav.cats{display:flex;gap:8px;overflow-x:auto;padding-block:4px 8px;scrollbar-width:none;}
+  nav.cats::-webkit-scrollbar{display:none;}
+  nav.cats a{
+    font-size:13px;font-weight:600;color:var(--ink-muted);white-space:nowrap;
+    padding:7px 13px;border-radius:999px;border:1px solid var(--line);text-decoration:none;
+  }
+
+  section.category{padding-block:40px;border-top:1px solid var(--line);}
+  .cat-head{display:flex;flex-direction:column;gap:4px;margin-bottom:20px;max-width:60ch;}
+  .cat-head h2{font-family:'Fraunces',serif;font-weight:600;font-size:24px;margin:0;}
+  .cat-head p{color:var(--ink-muted);font-size:14.5px;margin:0;line-height:1.55;}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;}
+  .card{
+    background:var(--surface);border:1px solid var(--line);border-radius:14px;
+    box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column;
+  }
+  .card-art{
+    aspect-ratio:4/3;background:var(--surface-2);display:flex;align-items:center;justify-content:center;
+    color:var(--ink-faint);font-family:'JetBrains Mono',monospace;font-size:11px;text-align:center;padding:12px;
+  }
+  .card-body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:8px;flex:1;}
+  .card-name{font-weight:700;font-size:15px;}
+  .card-desc{color:var(--ink-muted);font-size:13.5px;line-height:1.5;flex:1;}
+  .card-foot{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:4px;}
+  .price{font-family:'Fraunces',serif;font-size:18px;font-variant-numeric:tabular-nums;}
+  .order-btn{
+    font-family:'Manrope',sans-serif;font-weight:700;font-size:12.5px;color:var(--whatsapp);
+    background:var(--whatsapp-soft);padding:7px 12px;border-radius:8px;text-decoration:none;
+    display:inline-flex;align-items:center;gap:5px;white-space:nowrap;
+  }
+
+  .trust{
+    padding-block:36px;border-top:1px solid var(--line);
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;
+  }
+  .trust-item{display:flex;flex-direction:column;gap:4px;}
+  .trust-item .t{font-weight:700;font-size:14.5px;}
+  .trust-item .d{color:var(--ink-muted);font-size:13px;line-height:1.5;}
+
+  footer{
+    border-top:1px solid var(--line);padding-block:28px calc(28px + env(safe-area-inset-bottom,0px));
+    display:flex;flex-direction:column;gap:10px;color:var(--ink-faint);font-size:13px;
+  }
+  footer .contact{font-family:'JetBrains Mono',monospace;color:var(--ink-muted);}
+  footer .copy-btn{
+    font-family:'JetBrains Mono',monospace;font-size:12px;border:1px solid var(--line);background:none;
+    color:var(--ink-muted);padding:4px 9px;border-radius:6px;cursor:pointer;margin-left:6px;
+  }
+
+  @media (max-width:480px){
+    .hero{padding-block:40px 28px;}
+    .trust{grid-template-columns:1fr 1fr;}
+  }
+</style>
+
+<header class="top">
+  <div class="wrap top-inner">
+    <span class="wordmark">Nestwell</span>
+    <a class="top-cta" href="https://wa.me/92XXXXXXXXXX?text=Hi%20Nestwell%2C%20I%20have%20a%20question" target="_blank" rel="noopener">
+      Order on WhatsApp →
+    </a>
+  </div>
+</header>
+
+<div class="wrap">
+  <section class="hero">
+    <span class="eyebrow">Everyday comfort, sourced &amp; curated</span>
+    <h1>Small things that make the day easier.</h1>
+    <p>Nestwell is a curated shop for pet comfort, home wellness, self-care, kitchen ease, and everyday fitness — five categories, one idea: your space and your routine should feel a little kinder. Browse below, then order directly on WhatsApp.</p>
+    <div class="hero-actions">
+      <a class="btn primary" href="https://wa.me/92XXXXXXXXXX?text=Hi%20Nestwell%2C%20I%27d%20like%20to%20order" target="_blank" rel="noopener">Message us to order</a>
+      <a class="btn ghost" href="#pet-comfort">Browse the shop</a>
+    </div>
+  </section>
+
+  <nav class="cats" aria-label="Jump to category">
+    <a href="#pet-comfort">Pet Comfort</a>
+    <a href="#home-wellness">Home Wellness</a>
+    <a href="#self-care">Self-Care &amp; Recovery</a>
+    <a href="#kitchen">Kitchen &amp; Organization</a>
+    <a href="#fitness">Fitness &amp; Active</a>
+  </nav>
+
+  <section class="category" id="pet-comfort">
+    <div class="cat-head">
+      <h2>Pet Comfort</h2>
+      <p>For the ones who curl up next to you. Calmer bedtimes, slower mealtimes, happier noses.</p>
+    </div>
+    <div class="grid">
+      <article class="card">
+        <div class="card-art">Donut Calming Bed</div>
+        <div class="card-body">
+          <span class="card-name">Donut Calming Bed</span>
+          <span class="card-desc">A raised rim to curl into — the same instinct that makes pets burrow against you, built into a bed they can have all to themselves.</span>
+          <div class="card-foot"><span class="price">$25</span><a class="order-btn" href="https://wa.me/92XXXXXXXXXX?text=Hi%2C%20I%27d%20like%20to%20order%20the%20Donut%20Calming%20Bed" target="_blank" rel="noopener">Order →</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-art">Enrichment Lick Mat</div>
+        <div class="card-body">
+          <span class="card-name">Enrichment Lick Mat</span>
+          <span class="card-desc">Suctions to any flat surface and turns a two-minute meal into ten unhurried ones — vet-recommended for anxious eaters.</span>
+          <div class="card-foot"><span class="price">$10</span><a class="order-btn" href="https://wa.me/92XXXXXXXXXX?text=Hi%2C%20I%27d%20like%20to%20order%20the%20Enrichment%20Lick%20Mat" target="_blank" rel="noopener">Order →</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-art">Snuffle Mat</div>
+        <div class="card-body">
+          <span class="card-name">Snuffle Mat</span>
+          <span class="card-desc">Fabric folds hide treats for nose-work that tires a dog out mentally, not just physically. Machine washable.</span>
+          <div class="card-foot"><span class="price">$18</span><a class="order-btn" href="https://wa.me/92XXXXXXXXXX?text=Hi%2C%20I%27d%20like%20to%20order%20the%20Snuffle%20Mat" target="_blank" rel="noopener">Order →</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-art">Slow-Feeder Bowl</div>
+        <div class="card-body">
+          <span class="card-name">Slow-Feeder Bowl</span>
+          <span class="card-desc">Ridged interior slows fast eaters down — easier on digestion, less mess left behind on the floor.</span>
+          <div class="card-foot"><span class="price">$26</span><a class="order-btn" href="https://wa.me/92XXXXXXXXXX?text=Hi%2C%20I%27d%20like%20to%20order%20the%20Slow-Feeder%20Bowl" target="_blank" rel="noopener">Order →</a></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="category" id="home-wellness">
+    <div class="cat-head">
+      <h2>Home Wellness &amp; Comfort</h2>
+      <p>Small atmosphere changes that make a room feel like yours again.</p>
+    </div>
+    <div class="grid">
+      <article class="card">
+        <div class="card-art">Sunset Projection Lamp</div>
+        <div class="card-body">
+          <span class="card-name">Sunset Projection Lamp</span>
+          <span class="card-desc">Casts a warm, golden-hour glow across any wall — the lighting people drive to the beach for, on a dimmer switch at home.</span>
+          <div class="card-foot"><span class="price">$45</span><a class="order-btn" href="https://wa.me/92XXXXXXXXXX?text=Hi%2C%20I%27d%20like%20to%20order%20the%20Sunset%20Projection%20Lamp" target="_blank" rel="noopener">Order →</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-art">Weighted Plushie</div>
+        <div class="card-body">
+          <span class="card-name">Weighted Plushie</span>
+          <span class="card-desc">Gentle, evenly-distributed weight for the same grounding effect as a weighted blanket, sized for a desk, a couch, or a child's arms.</span>
+          <div class="card-foot"><span class="price">$38</span><a class="order-btn" href="https://wa.me/92XXXXXXXXXX?text=Hi%2C%20I%27d%20like%20to%20order%20the%20Weighted%20Plushie" target="_blank" rel="noopener">Order →</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-art">Diatomite Bath Mat</div>
+        <div class="card-body">
+          <span class="card-name">Diatomite Bath Mat</span>
+          <span class="card-desc">Dries to the touch in under a minute — no more damp bathmat smell, no more slipping on wet tile.</span>
+          <div class="card-foot"><span class="price">$38</span><a class="order-btn" href="https://wa.me/92XXXXXXXXXX?text=Hi%2C%20I%27d%20like%20to%20order%20the%20Diatomite%20Bath%20Mat" target="_blank" rel="noopener">Order →</a></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="category" id="self-care">
+    <div class="cat-head">
+      <h2>Self-Care &amp; Recovery</h2>
+      <p>Five-minute rituals that actually fit into a real day.</p>
+    </div>
+    <div class="grid">
+      <article class="card">
+        <div class="card-art">Gua Sha Stone Set</div>
+        <div class="card-body">
+          <span class="card-name">Gua Sha Stone Set</span>
+          <span class="card-desc">The two-shape set facialists actually use — smooths tension along the jaw and brow in a two-minute morning routine.</span>
+          <div class="card-foot"><span class="price">$26</span><a class="order-btn" href="https://wa.me/92XXXXXXXXXX?text=Hi%2C%20I%27d%20like%20to%20order%20the%20Gua%20Sha%20Stone%20Set" target="_blank" rel="noopener">Order →</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-art">Electric Scalp Massager</div>
+        <div class="card-body">
+          <span class="card-name">Electric Scalp Massager</span>
+          <span class="card-desc">Waterproof, cordless, and genuinely relaxing in the shower — the five minutes of the day that are just for you.</span>
+          <div class="card-foot"><span class="price">$29</span><a class="order-btn" href="https://wa.me/92XXXXXXXXXX?text=Hi%2C%20I%27d%20like%20to%20order%20the%20Electric%20Scalp%20Massager" target="_blank" rel="noopener">Order →</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-art">Acupressure Mat + Pillow</div>
+        <div class="card-body">
+          <span class="card-name">Acupressure Mat + Pillow</span>
+          <span class="card-desc">Fifteen minutes lying on this replaces the tension a desk day leaves in your back — the set pairs the mat with a matching neck pillow.</span>
+          <div class="card-foot"><span class="price">$52</span><a class="order-btn" href="https://wa.me/92XXXXXXXXXX?text=Hi%2C%20I%27d%20like%20to%20order%20the%20Acupressure%20Mat%20and%20Pillow" target="_blank" rel="noopener">Order →</a></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="category" id="kitchen">
+    <div class="cat-head">
+      <h2>Kitchen &amp; Organization</h2>
+      <p>The small fixes that make a kitchen feel like it finally has a system.</p>
+    </div>
+    <div class="grid">
+      <article class="card">
+        <div class="card-art">Magnetic Spice Rack</div>
+        <div class="card-body">
+          <span class="card-name">Magnetic Spice Rack</span>
+          <span class="card-desc">Jars stick straight to the fridge or a steel panel — every spice visible from above instead of buried in a cupboard.</span>
+          <div class="card-foot"><span class="price">$48</span><a class="order-btn" href="https://wa.me/92XXXXXXXXXX?text=Hi%2C%20I%27d%20like%20to%20order%20the%20Magnetic%20Spice%20Rack" target="_blank" rel="noopener">Order →</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-art">Collapsible Storage Set</div>
+        <div class="card-body">
+          <span class="card-name">Collapsible Storage Set</span>
+          <span class="card-desc">Full size for leftovers, flat for the drawer when empty — the set that finally stops eating cupboard space.</span>
+          <div class="card-foot"><span class="price">$29</span><a class="order-btn" href="https://wa.me/92XXXXXXXXXX?text=Hi%2C%20I%27d%20like%20to%20order%20the%20Collapsible%20Storage%20Set" target="_blank" rel="noopener">Order →</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-art">Silicone Stretch Lids</div>
+        <div class="card-body">
+          <span class="card-name">Silicone Stretch Lids</span>
+          <span class="card-desc">Stretch over any bowl, pan, or cut fruit — a set of six that quietly replaces most of the cling film in the drawer.</span>
+          <div class="card-foot"><span class="price">$25</span><a class="order-btn" href="https://wa.me/92XXXXXXXXXX?text=Hi%2C%20I%27d%20like%20to%20order%20the%20Silicone%20Stretch%20Lids" target="_blank" rel="noopener">Order →</a></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="category" id="fitness">
+    <div class="cat-head">
+      <h2>Fitness &amp; Active Lifestyle</h2>
+      <p>Equipment that earns a permanent spot by the door, not the back of a closet.</p>
+    </div>
+    <div class="grid">
+      <article class="card">
+        <div class="card-art">Smart Jump Rope</div>
+        <div class="card-body">
+          <span class="card-name">Smart Jump Rope</span>
+          <span class="card-desc">Counts reps and calories on a built-in display — no phone, no app to open before you can start.</span>
+          <div class="card-foot"><span class="price">$36</span><a class="order-btn" href="https://wa.me/92XXXXXXXXXX?text=Hi%2C%20I%27d%20like%20to%20order%20the%20Smart%20Jump%20Rope" target="_blank" rel="noopener">Order →</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-art">Textured Foam Roller</div>
+        <div class="card-body">
+          <span class="card-name">Textured Foam Roller</span>
+          <span class="card-desc">Deeper contour than a smooth roller — the ten minutes after a run that decide how your legs feel tomorrow.</span>
+          <div class="card-foot"><span class="price">$32</span><a class="order-btn" href="https://wa.me/92XXXXXXXXXX?text=Hi%2C%20I%27d%20like%20to%20order%20the%20Textured%20Foam%20Roller" target="_blank" rel="noopener">Order →</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-art">Alignment-Line Yoga Mat</div>
+        <div class="card-body">
+          <span class="card-name">Alignment-Line Yoga Mat</span>
+          <span class="card-desc">Printed guide lines keep hands and feet square without thinking about it — useful from the first class, not just the tenth.</span>
+          <div class="card-foot"><span class="price">$36</span><a class="order-btn" href="https://wa.me/92XXXXXXXXXX?text=Hi%2C%20I%27d%20like%20to%20order%20the%20Alignment-Line%20Yoga%20Mat" target="_blank" rel="noopener">Order →</a></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="trust">
+    <div class="trust-item">
+      <span class="t">Order by message</span>
+      <span class="d">No account, no checkout form — tell us what you want on WhatsApp and we confirm price and delivery together.</span>
+    </div>
+    <div class="trust-item">
+      <span class="t">Pay on delivery or transfer</span>
+      <span class="d">Cash on delivery where available, or bank/JazzCash/Easypaisa transfer — whichever is easier for you.</span>
+    </div>
+    <div class="trust-item">
+      <span class="t">New here</span>
+      <span class="d">Nestwell is a small, independently run shop. We're upfront that we're new — every order helps us grow.</span>
+    </div>
+  </section>
+
+  <footer>
+    <span>Nestwell — everyday comfort, curated.</span>
+    <span class="contact">
+      WhatsApp: +92 XXX XXXXXXX
+      <button class="copy-btn" type="button" onclick="copyNumber(this)">Copy</button>
+    </span>
+  </footer>
+</div>
+
+<script>
+  function copyNumber(btn){
+    var num = "+92XXXXXXXXXX";
+    var reset = function(){ btn.textContent = "Copy"; };
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(num).then(function(){
+        btn.textContent = "Copied";
+        setTimeout(reset, 1500);
+      }).catch(function(){
+        selectFallback();
+      });
+    } else {
+      selectFallback();
+    }
+    function selectFallback(){
+      var range = document.createRange();
+      var node = btn.previousSibling || btn.parentNode;
+      try{
+        range.selectNodeContents(node);
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        sel.addRange(range);
+      }catch(e){}
+    }
+  }
+</script>
+</body></html>
